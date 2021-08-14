@@ -17,3 +17,8 @@
   - string -> sequence of characters
   - int -> integer numbers
   - float64 -> 64bit floating point numbers
+- Re-assinging to variable
+  When you re-assing a value to a variable, you need to use '=' not ':='. ':=' is used for only when declaring a variable.
+  ```go
+    name = "John"
+  ```
