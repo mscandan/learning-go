@@ -22,3 +22,30 @@
   ```go
     name = "John"
   ```
+- Functions
+
+  - Creating a function in go is very simple. The func keyword means that we are creating a function.
+    ```go
+      func printHelloWorld() {
+        fmt.Println("Hello world")
+      }
+    ```
+  - The code above is creates a new function called 'printHelloWorld' and in the function we are printing "Hello world".
+  - Functions can have return values. What does that mean you might ask. It means in some functions we can make some operations on variables or else.
+    ```go
+      func returnHelloWorld() string {
+        return "Hello world"
+      }
+    ```
+    With this code above. We are creating a function called 'returnHelloWorld' and in the end of this function we are returning a "Hello world" string. You can assign the return value to the new variable in wherever you want you use the function.
+    ```go
+      helloWorld := returnHelloWorld() // this line of code creates a new variable and assigns the return value of returnHelloWorld function to it.
+      fmt.Println(helloWorld)
+      fmt.Println(returnHelloWorld()) // this line of code prints the return value of returnHelloWorld function.
+    ```
+  - When creating a function if you don't specify the type of return value you don't have to return anything from the function.
+    ```go
+      func sayMyName() {
+        fmt.Println("Selcuk")
+      }
+    ```
