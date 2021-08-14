@@ -49,3 +49,30 @@
         fmt.Println("Selcuk")
       }
     ```
+
+- Array and Slice
+
+  - Array
+    - Array means fixed length list of things. When we creating an array we need to specify it's length.
+  - Slice
+    - Slice means an array that can grow or shrink.
+    - Every element in slice must be of same type.
+    - Declaring a slice
+      ```go
+        cars := []string{"Audi", "BMW", "Ferrari"}
+      ```
+    - Appending value to a slice
+      ```go
+        cars = append(cars, "Mercedes Benz")
+      ```
+  - They both must be defined with data type.
+  - Indexes starts from 0.
+
+- For loops
+  - We can use for loops to iterate in a slice.
+    ```go
+      for i, car := range cars {
+        fmt.Println(i, car)
+      }
+    ```
+    In the code above, the i equals the current index of the current element, it starts from 0 and goes off to slice's length - 1 and the car means the slice's i indexed value.

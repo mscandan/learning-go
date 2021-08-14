@@ -9,6 +9,18 @@ func main() {
 	card2 := newCard() // create a variable named 'card2' and assign newCard function's return value to it.
 	fmt.Println(card)
 	fmt.Println(card2)
+
+	// declare a slice
+	cards := []string{"Ace of Spades", newCard()}
+	fmt.Println(cards)
+	cards = append(cards, "Six of Spades")
+	fmt.Println(cards)
+
+	// for loop
+	for i, singleCard := range cards {
+		fmt.Println(i, singleCard)
+	}
+
 }
 
 // creating a function and setting it's type of return value
