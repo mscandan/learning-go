@@ -69,6 +69,7 @@
   - Indexes starts from 0.
 
 - For loops
+
   - We can use for loops to iterate in a slice.
     ```go
       for i, car := range cars {
@@ -76,3 +77,16 @@
       }
     ```
     In the code above, the i equals the current index of the current element, it starts from 0 and goes off to slice's length - 1 and the car means the slice's i indexed value.
+
+- Custom Type Declerations
+  We can declare a specific types for different occasions. As we can see in the "deck.go" file we've created a new type called deck and it is a slice of strings
+
+- Receiver Functions
+  In this code block below, we've created a function named 'print' for spesificly for variables in deck type. This is called 'receiver function' and we are enable to use it with every variable typed 'deck'. The '(d deck)' part is specifies that function is a recevier.
+  ```go
+    func (d deck) print(){
+      for i, card := range d {
+        fmt.Println(i, card)
+      }
+    }
+  ```
