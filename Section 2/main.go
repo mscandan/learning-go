@@ -28,6 +28,12 @@ func main() {
 	// newDeck.print()
 
 	newDeck := newDeck()
+	// newDeck.print()
+	// hand, remainingCards := deal(newDeck, 5)
+	newDeck.saveToFile("cards")
+	// newDeckFromDisk := newDeckFromFile("cards")
+	// fmt.Println(newDeckFromDisk)
+	newDeck.shuffle()
 	newDeck.print()
 }
 

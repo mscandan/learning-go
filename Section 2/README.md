@@ -83,10 +83,31 @@
 
 - Receiver Functions
   In this code block below, we've created a function named 'print' for spesificly for variables in deck type. This is called 'receiver function' and we are enable to use it with every variable typed 'deck'. The '(d deck)' part is specifies that function is a recevier.
+
   ```go
     func (d deck) print(){
       for i, card := range d {
         fmt.Println(i, card)
       }
     }
+  ```
+
+- Multiple Return Values
+  We've learned that the functions can return the value. They can return more than one. In the code block below the '(deck, deck)' part means that we are going to return 2 values typed deck.
+
+  ```go
+    func deal(d deck, handSize int) (deck, deck) {
+      // logic
+    }
+    returnVar1, returnVar2 := deal(newDeck, 5)
+  ```
+
+- Testing in go
+  We need to create a file that specific to test functions. In testing we have to write a meaningfull test to test our functions to check if the functions works how we wanted them to work. The "go test" command below is runs the tests that we wrote to check our functions are working properly
+  ```sh
+    go test
+  ```
+  We can run the test with the command below
+  ```sh
+    go test deck_test.go deck.go
   ```
